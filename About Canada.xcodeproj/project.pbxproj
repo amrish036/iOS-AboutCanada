@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE30ED7920A68D0A00D76FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */; };
+		EE30ED7B20A68D0A00D76FC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30ED7A20A68D0A00D76FC1 /* ViewController.swift */; };
+		EE30ED7E20A68D0A00D76FC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE30ED7C20A68D0A00D76FC1 /* Main.storyboard */; };
+		EE30ED8020A68D0A00D76FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE30ED7F20A68D0A00D76FC1 /* Assets.xcassets */; };
+		EE30ED8320A68D0A00D76FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE30ED8120A68D0A00D76FC1 /* LaunchScreen.storyboard */; };
+		EE30ED8E20A68D0A00D76FC1 /* About_CanadaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30ED8D20A68D0A00D76FC1 /* About_CanadaTests.swift */; };
+		EE30ED9920A68D0A00D76FC1 /* About_CanadaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30ED9820A68D0A00D76FC1 /* About_CanadaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE30ED8A20A68D0A00D76FC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE30ED6D20A68D0900D76FC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE30ED7420A68D0900D76FC1;
+			remoteInfo = "About Canada";
+		};
+		EE30ED9520A68D0A00D76FC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE30ED6D20A68D0900D76FC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE30ED7420A68D0900D76FC1;
+			remoteInfo = "About Canada";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE30ED7520A68D0900D76FC1 /* About Canada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About Canada.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE30ED7A20A68D0A00D76FC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE30ED7D20A68D0A00D76FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE30ED7F20A68D0A00D76FC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE30ED8220A68D0A00D76FC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE30ED8420A68D0A00D76FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE30ED8920A68D0A00D76FC1 /* About CanadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "About CanadaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30ED8D20A68D0A00D76FC1 /* About_CanadaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CanadaTests.swift; sourceTree = "<group>"; };
+		EE30ED8F20A68D0A00D76FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE30ED9420A68D0A00D76FC1 /* About CanadaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "About CanadaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE30ED9820A68D0A00D76FC1 /* About_CanadaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_CanadaUITests.swift; sourceTree = "<group>"; };
+		EE30ED9A20A68D0A00D76FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE30ED7220A68D0900D76FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30ED8620A68D0A00D76FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30ED9120A68D0A00D76FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE30ED6C20A68D0900D76FC1 = {
+			isa = PBXGroup;
+			children = (
+				EE30ED7720A68D0A00D76FC1 /* About Canada */,
+				EE30ED8C20A68D0A00D76FC1 /* About CanadaTests */,
+				EE30ED9720A68D0A00D76FC1 /* About CanadaUITests */,
+				EE30ED7620A68D0900D76FC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE30ED7620A68D0900D76FC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE30ED7520A68D0900D76FC1 /* About Canada.app */,
+				EE30ED8920A68D0A00D76FC1 /* About CanadaTests.xctest */,
+				EE30ED9420A68D0A00D76FC1 /* About CanadaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE30ED7720A68D0A00D76FC1 /* About Canada */ = {
+			isa = PBXGroup;
+			children = (
+				EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */,
+				EE30ED7A20A68D0A00D76FC1 /* ViewController.swift */,
+				EE30ED7C20A68D0A00D76FC1 /* Main.storyboard */,
+				EE30ED7F20A68D0A00D76FC1 /* Assets.xcassets */,
+				EE30ED8120A68D0A00D76FC1 /* LaunchScreen.storyboard */,
+				EE30ED8420A68D0A00D76FC1 /* Info.plist */,
+			);
+			path = "About Canada";
+			sourceTree = "<group>";
+		};
+		EE30ED8C20A68D0A00D76FC1 /* About CanadaTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE30ED8D20A68D0A00D76FC1 /* About_CanadaTests.swift */,
+				EE30ED8F20A68D0A00D76FC1 /* Info.plist */,
+			);
+			path = "About CanadaTests";
+			sourceTree = "<group>";
+		};
+		EE30ED9720A68D0A00D76FC1 /* About CanadaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE30ED9820A68D0A00D76FC1 /* About_CanadaUITests.swift */,
+				EE30ED9A20A68D0A00D76FC1 /* Info.plist */,
+			);
+			path = "About CanadaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE30ED7420A68D0900D76FC1 /* About Canada */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE30ED9D20A68D0A00D76FC1 /* Build configuration list for PBXNativeTarget "About Canada" */;
+			buildPhases = (
+				EE30ED7120A68D0900D76FC1 /* Sources */,
+				EE30ED7220A68D0900D76FC1 /* Frameworks */,
+				EE30ED7320A68D0900D76FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "About Canada";
+			productName = "About Canada";
+			productReference = EE30ED7520A68D0900D76FC1 /* About Canada.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE30ED8820A68D0A00D76FC1 /* About CanadaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE30EDA020A68D0A00D76FC1 /* Build configuration list for PBXNativeTarget "About CanadaTests" */;
+			buildPhases = (
+				EE30ED8520A68D0A00D76FC1 /* Sources */,
+				EE30ED8620A68D0A00D76FC1 /* Frameworks */,
+				EE30ED8720A68D0A00D76FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE30ED8B20A68D0A00D76FC1 /* PBXTargetDependency */,
+			);
+			name = "About CanadaTests";
+			productName = "About CanadaTests";
+			productReference = EE30ED8920A68D0A00D76FC1 /* About CanadaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE30ED9320A68D0A00D76FC1 /* About CanadaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE30EDA320A68D0A00D76FC1 /* Build configuration list for PBXNativeTarget "About CanadaUITests" */;
+			buildPhases = (
+				EE30ED9020A68D0A00D76FC1 /* Sources */,
+				EE30ED9120A68D0A00D76FC1 /* Frameworks */,
+				EE30ED9220A68D0A00D76FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE30ED9620A68D0A00D76FC1 /* PBXTargetDependency */,
+			);
+			name = "About CanadaUITests";
+			productName = "About CanadaUITests";
+			productReference = EE30ED9420A68D0A00D76FC1 /* About CanadaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE30ED6D20A68D0900D76FC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Amrish Mahesh";
+				TargetAttributes = {
+					EE30ED7420A68D0900D76FC1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EE30ED8820A68D0A00D76FC1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE30ED7420A68D0900D76FC1;
+					};
+					EE30ED9320A68D0A00D76FC1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE30ED7420A68D0900D76FC1;
+					};
+				};
+			};
+			buildConfigurationList = EE30ED7020A68D0900D76FC1 /* Build configuration list for PBXProject "About Canada" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE30ED6C20A68D0900D76FC1;
+			productRefGroup = EE30ED7620A68D0900D76FC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE30ED7420A68D0900D76FC1 /* About Canada */,
+				EE30ED8820A68D0A00D76FC1 /* About CanadaTests */,
+				EE30ED9320A68D0A00D76FC1 /* About CanadaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE30ED7320A68D0900D76FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30ED8320A68D0A00D76FC1 /* LaunchScreen.storyboard in Resources */,
+				EE30ED8020A68D0A00D76FC1 /* Assets.xcassets in Resources */,
+				EE30ED7E20A68D0A00D76FC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30ED8720A68D0A00D76FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30ED9220A68D0A00D76FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE30ED7120A68D0900D76FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30ED7B20A68D0A00D76FC1 /* ViewController.swift in Sources */,
+				EE30ED7920A68D0A00D76FC1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30ED8520A68D0A00D76FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30ED8E20A68D0A00D76FC1 /* About_CanadaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE30ED9020A68D0A00D76FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30ED9920A68D0A00D76FC1 /* About_CanadaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE30ED8B20A68D0A00D76FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE30ED7420A68D0900D76FC1 /* About Canada */;
+			targetProxy = EE30ED8A20A68D0A00D76FC1 /* PBXContainerItemProxy */;
+		};
+		EE30ED9620A68D0A00D76FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE30ED7420A68D0900D76FC1 /* About Canada */;
+			targetProxy = EE30ED9520A68D0A00D76FC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE30ED7C20A68D0A00D76FC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE30ED7D20A68D0A00D76FC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE30ED8120A68D0A00D76FC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE30ED8220A68D0A00D76FC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE30ED9B20A68D0A00D76FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE30ED9C20A68D0A00D76FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE30ED9E20A68D0A00D76FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2R59M37PL;
+				INFOPLIST_FILE = "About Canada/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amrish.036.About-Canada";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE30ED9F20A68D0A00D76FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2R59M37PL;
+				INFOPLIST_FILE = "About Canada/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amrish.036.About-Canada";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE30EDA120A68D0A00D76FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2R59M37PL;
+				INFOPLIST_FILE = "About CanadaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amrish.036.About-CanadaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/About Canada.app/About Canada";
+			};
+			name = Debug;
+		};
+		EE30EDA220A68D0A00D76FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2R59M37PL;
+				INFOPLIST_FILE = "About CanadaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amrish.036.About-CanadaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/About Canada.app/About Canada";
+			};
+			name = Release;
+		};
+		EE30EDA420A68D0A00D76FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2R59M37PL;
+				INFOPLIST_FILE = "About CanadaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amrish.036.About-CanadaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "About Canada";
+			};
+			name = Debug;
+		};
+		EE30EDA520A68D0A00D76FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2R59M37PL;
+				INFOPLIST_FILE = "About CanadaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amrish.036.About-CanadaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "About Canada";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE30ED7020A68D0900D76FC1 /* Build configuration list for PBXProject "About Canada" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30ED9B20A68D0A00D76FC1 /* Debug */,
+				EE30ED9C20A68D0A00D76FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE30ED9D20A68D0A00D76FC1 /* Build configuration list for PBXNativeTarget "About Canada" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30ED9E20A68D0A00D76FC1 /* Debug */,
+				EE30ED9F20A68D0A00D76FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE30EDA020A68D0A00D76FC1 /* Build configuration list for PBXNativeTarget "About CanadaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30EDA120A68D0A00D76FC1 /* Debug */,
+				EE30EDA220A68D0A00D76FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE30EDA320A68D0A00D76FC1 /* Build configuration list for PBXNativeTarget "About CanadaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE30EDA420A68D0A00D76FC1 /* Debug */,
+				EE30EDA520A68D0A00D76FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE30ED6D20A68D0900D76FC1 /* Project object */;
+}
