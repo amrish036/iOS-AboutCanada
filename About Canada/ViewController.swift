@@ -47,10 +47,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     Alamofire.request(requestURL).responseString { response in
       
       if let responseObject = response.result.value {
-       
+        
         if let dataFromString = responseObject.data(using: .utf8, allowLossyConversion: false) {
           let json = try! JSON(data: dataFromString)
-         
+          
           let allElements = json["rows"]
           
           self.navigationItem.title = json["title"].string
@@ -89,20 +89,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
           
           let imageUrl: URL? = URL(string: self.elements[indexPath.row].imageHref!)
           data = try? Data(contentsOf: imageUrl!)
-
+          
         }
         DispatchQueue.main.async {
           // Run UI Updates or call completion block
           if let imageData = data {
             cell.imageCell.image = UIImage(data: imageData)
-           
+            
             if cell.imageCell.image != nil {
               let size = CGSize(width: (cell.imageCell.image?.size.width)!, height: (cell.imageCell.image?.size.height)!)
               print(size)
               self.elements[indexPath.row].size = size
               self.elements[indexPath.row].imageData = UIImage(data:imageData)
             }
-
+            
           }
           if data == nil {
             cell.imageCell.image = UIImage(named: "default-image.png")
@@ -131,13 +131,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let mainStoryboard:UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
     let CollectionDVController = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! CollectionDetailViewController
     CollectionDVController.imageData = elements[indexPath.row].imageData!
-    CollectionDVController.desc = elements[indexPath.row].description!
-    CollectionDVController.title = elements[indexPath.row].title!
+    
+    if(elements[indexPath.row].description != nil){
+      CollectionDVController.desc = elements[indexPath.row].description!
+    }
+    if (elements[indexPath.row].title != nil){
+      CollectionDVController.title = elements[indexPath.row].title!
+    }
     self.navigationController?.pushViewController(CollectionDVController, animated: true)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+    
     return CGSize(width:100, height:150)
   }
   
