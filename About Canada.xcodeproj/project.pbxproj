@@ -21,6 +21,7 @@
 		EE30EDB020A6BE9600D76FC1 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE30EDAF20A6BE9600D76FC1 /* background.jpg */; };
 		EE30EDB220A6C6E300D76FC1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */; };
 		EE30EDB420A6D2F400D76FC1 /* default-image.png in Resources */ = {isa = PBXBuildFile; fileRef = EE30EDB320A6D2F300D76FC1 /* default-image.png */; };
+		EE30EDB820A7308900D76FC1 /* CollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30EDB720A7308900D76FC1 /* CollectionDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		EE30EDAF20A6BE9600D76FC1 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE30EDB320A6D2F300D76FC1 /* default-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-image.png"; sourceTree = "<group>"; };
+		EE30EDB720A7308900D76FC1 /* CollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				EE30EDAD20A6BE6200D76FC1 /* Supporting Files */,
 				EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */,
 				EE30ED7A20A68D0A00D76FC1 /* ViewController.swift */,
+				EE30EDB720A7308900D76FC1 /* CollectionDetailViewController.swift */,
 				EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */,
 				EE30ED7C20A68D0A00D76FC1 /* Main.storyboard */,
 				EE30ED8420A68D0A00D76FC1 /* Info.plist */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE30ED7B20A68D0A00D76FC1 /* ViewController.swift in Sources */,
+				EE30EDB820A7308900D76FC1 /* CollectionDetailViewController.swift in Sources */,
 				EE30EDB220A6C6E300D76FC1 /* CustomCollectionViewCell.swift in Sources */,
 				EE30ED7920A68D0A00D76FC1 /* AppDelegate.swift in Sources */,
 			);

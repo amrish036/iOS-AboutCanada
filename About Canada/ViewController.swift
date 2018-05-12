@@ -15,9 +15,10 @@ struct Element {
   let description: String?
   let imageHref: String?
   var size: CGSize?
+  var imageData: UIImage?
 }
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
   
   //MARK: Variables and Outlets
   var elements = [Element]()
@@ -52,11 +53,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
          
           let allElements = json["rows"]
           
+          self.navigationItem.title = json["title"].string
+          
           for item in allElements {
             let thisItem = Element(title:item.1["title"].string,
                                    description:item.1["description"].string,
                                    imageHref:(item.1["imageHref"].string),
-                                   size:CGSize(width:0,height:0))
+                                   size:CGSize(width:0,height:0),
+                                   imageData: UIImage(named: "default-image.png"))
             self.elements.append(thisItem)
           }
         }
@@ -96,6 +100,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
               let size = CGSize(width: (cell.imageCell.image?.size.width)!, height: (cell.imageCell.image?.size.height)!)
               print(size)
               self.elements[indexPath.row].size = size
+              self.elements[indexPath.row].imageData = UIImage(data:imageData)
             }
 
           }
@@ -109,6 +114,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
       }
       
+      
       cell.labelCell.text = self.elements[indexPath.row].title
       
       return cell
@@ -121,10 +127,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     return cell
   }
   
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let mainStoryboard:UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
+    let CollectionDVController = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! CollectionDetailViewController
+    CollectionDVController.imageData = elements[indexPath.row].imageData!
+    CollectionDVController.desc = elements[indexPath.row].description!
+    CollectionDVController.title = elements[indexPath.row].title!
+    self.navigationController?.pushViewController(CollectionDVController, animated: true)
+  }
+  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
     return CGSize(width:100, height:150)
   }
   
+  
+  
 }
+
 
