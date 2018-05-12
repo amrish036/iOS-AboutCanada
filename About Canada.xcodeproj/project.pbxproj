@@ -18,6 +18,9 @@
 		EE30EDA920A6902700D76FC1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE30EDA620A6902700D76FC1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE30EDAA20A6902700D76FC1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE30EDA720A6902700D76FC1 /* SwiftyJSON.framework */; };
 		EE30EDAB20A6902700D76FC1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE30EDA720A6902700D76FC1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE30EDB020A6BE9600D76FC1 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE30EDAF20A6BE9600D76FC1 /* background.jpg */; };
+		EE30EDB220A6C6E300D76FC1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */; };
+		EE30EDB420A6D2F400D76FC1 /* default-image.png in Resources */ = {isa = PBXBuildFile; fileRef = EE30EDB320A6D2F300D76FC1 /* default-image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		EE30ED9A20A68D0A00D76FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE30EDA620A6902700D76FC1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		EE30EDA720A6902700D76FC1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		EE30EDAF20A6BE9600D76FC1 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE30EDB320A6D2F300D76FC1 /* default-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-image.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +128,11 @@
 		EE30ED7720A68D0A00D76FC1 /* About Canada */ = {
 			isa = PBXGroup;
 			children = (
+				EE30EDAD20A6BE6200D76FC1 /* Supporting Files */,
 				EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */,
 				EE30ED7A20A68D0A00D76FC1 /* ViewController.swift */,
+				EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */,
 				EE30ED7C20A68D0A00D76FC1 /* Main.storyboard */,
-				EE30ED7F20A68D0A00D76FC1 /* Assets.xcassets */,
-				EE30ED8120A68D0A00D76FC1 /* LaunchScreen.storyboard */,
 				EE30ED8420A68D0A00D76FC1 /* Info.plist */,
 			);
 			path = "About Canada";
@@ -148,6 +154,25 @@
 				EE30ED9A20A68D0A00D76FC1 /* Info.plist */,
 			);
 			path = "About CanadaUITests";
+			sourceTree = "<group>";
+		};
+		EE30EDAD20A6BE6200D76FC1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE30EDAE20A6BE7E00D76FC1 /* Images */,
+				EE30ED7F20A68D0A00D76FC1 /* Assets.xcassets */,
+				EE30ED8120A68D0A00D76FC1 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE30EDAE20A6BE7E00D76FC1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EE30EDB320A6D2F300D76FC1 /* default-image.png */,
+				EE30EDAF20A6BE9600D76FC1 /* background.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE30ED8320A68D0A00D76FC1 /* LaunchScreen.storyboard in Resources */,
+				EE30EDB020A6BE9600D76FC1 /* background.jpg in Resources */,
 				EE30ED8020A68D0A00D76FC1 /* Assets.xcassets in Resources */,
 				EE30ED7E20A68D0A00D76FC1 /* Main.storyboard in Resources */,
+				EE30EDB420A6D2F400D76FC1 /* default-image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE30ED7B20A68D0A00D76FC1 /* ViewController.swift in Sources */,
+				EE30EDB220A6C6E300D76FC1 /* CustomCollectionViewCell.swift in Sources */,
 				EE30ED7920A68D0A00D76FC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
