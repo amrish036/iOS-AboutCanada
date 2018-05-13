@@ -21,16 +21,30 @@ struct Element {
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
   
   //MARK: Variables and Outlets
-  var elements = [Element]()
+  
   @IBOutlet weak var CollectionView: UICollectionView!
   var refresher: UIRefreshControl!
+  var elements = [Element]()
+  
+  let reachabilityManager = Alamofire.NetworkReachabilityManager(host:"www.google.com")
+  
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     CollectionView.delegate = self
     CollectionView.dataSource = self
-    getJSONData()
+    
+    if (reachabilityManager?.isReachable)! {
+      getJSONData()
+    }else{
+      
+      alert(title: "📵", message: "No Internet Connection 😢")
+      
+    }
+    
+    
     refresher = UIRefreshControl()
     refresher.attributedTitle = NSAttributedString(string:"Pull to refresh")
     refresher.addTarget(self, action: #selector(ViewController.refresh), for: UIControlEvents.valueChanged)
@@ -161,6 +175,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     getJSONData()
   }
   
+  func alert(title:String,message:String){
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    print("Alert \(title) with \(message)")
+    self.present(alert, animated: true, completion: nil)
+    
+    
+  }
   
 }
 
