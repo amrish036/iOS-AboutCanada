@@ -152,7 +152,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   @objc func refresh(){
     refresher.endRefreshing()
-    CollectionView.reloadData()
+    self.elements.removeAll()
+    getJSONData()
   }
   
   
