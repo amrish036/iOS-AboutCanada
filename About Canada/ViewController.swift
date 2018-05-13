@@ -118,8 +118,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
       }
       
+      if(self.elements[indexPath.row].title != nil){
+        cell.labelCell.text = self.elements[indexPath.row].title
+      }else{
+        cell.labelCell.text = "No Title!"
+      }
       
-      cell.labelCell.text = self.elements[indexPath.row].title
+      
       
       return cell
       
