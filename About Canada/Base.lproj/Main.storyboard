@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rhc-c3-yCO">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,20 +20,20 @@
                         <viewControllerLayoutGuide type="bottom" id="i0J-as-4hd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vhi-iq-IGT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBs-jh-u1M">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y3Q-Fg-syk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kMY-EZ-4GB">
-                                            <rect key="frame" x="8" y="8" width="359" height="651"/>
+                                            <rect key="frame" x="8" y="8" width="552" height="304"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3af-My-0Af">
                                                 <size key="itemSize" width="120" height="150"/>
@@ -120,44 +121,79 @@
                         <viewControllerLayoutGuide type="bottom" id="YLy-IQ-Dhg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fim-Dp-K2L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-GS-pZK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4W-uh-yjK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JLQ-3Y-Gcb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="274" preservesSuperviewLayoutMargins="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Csj-sC-m0S">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="274"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="274" id="9HO-B4-Gct"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="58" width="171" height="204"/>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mB0-Ch-Mhd">
-                                            <rect key="frame" x="8" y="282" width="359" height="200"/>
+                                            <rect key="frame" x="170" y="58" width="398" height="204"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="200" id="Hjb-vp-QRt"/>
+                                                <constraint firstAttribute="height" constant="204" id="Owp-VX-Zks"/>
                                             </constraints>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Owp-VX-Zks"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="Owp-VX-Zks"/>
+                                                </mask>
+                                            </variation>
                                         </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="top" secondItem="JLQ-3Y-Gcb" secondAttribute="top" id="I0H-kZ-VZ0"/>
-                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="trailing" secondItem="mB0-Ch-Mhd" secondAttribute="trailing" id="LMX-np-gr5"/>
-                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="leading" secondItem="mB0-Ch-Mhd" secondAttribute="leading" id="Lqr-CX-kCm"/>
-                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="trailing" secondItem="JLQ-3Y-Gcb" secondAttribute="trailingMargin" id="WSw-RY-gh7"/>
-                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="leading" secondItem="JLQ-3Y-Gcb" secondAttribute="leadingMargin" id="ZGb-TF-cy8"/>
-                                        <constraint firstItem="mB0-Ch-Mhd" firstAttribute="top" secondItem="Csj-sC-m0S" secondAttribute="bottom" constant="8" symbolic="YES" id="omC-vu-O8D"/>
-                                        <constraint firstItem="mB0-Ch-Mhd" firstAttribute="top" secondItem="Csj-sC-m0S" secondAttribute="bottom" constant="8" id="wvn-wj-pU6"/>
+                                        <constraint firstAttribute="trailing" secondItem="mB0-Ch-Mhd" secondAttribute="trailing" id="4cS-Xf-VgK"/>
+                                        <constraint firstItem="mB0-Ch-Mhd" firstAttribute="width" secondItem="JLQ-3Y-Gcb" secondAttribute="width" multiplier="0.7" id="Jrn-B7-T13"/>
+                                        <constraint firstAttribute="bottom" secondItem="mB0-Ch-Mhd" secondAttribute="bottom" id="KdA-5c-ugG">
+                                            <variation key="heightClass=compact" constant="58"/>
+                                        </constraint>
+                                        <constraint firstItem="mB0-Ch-Mhd" firstAttribute="leading" secondItem="JLQ-3Y-Gcb" secondAttribute="leading" id="LXo-Ma-B1d"/>
+                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="leading" secondItem="JLQ-3Y-Gcb" secondAttribute="leading" id="YRN-Yg-qLs"/>
+                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="centerX" secondItem="JLQ-3Y-Gcb" secondAttribute="centerX" id="Ywu-zB-yr7"/>
+                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="centerY" secondItem="JLQ-3Y-Gcb" secondAttribute="centerY" id="fwk-Qc-INX"/>
+                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="top" secondItem="JLQ-3Y-Gcb" secondAttribute="top" id="msX-hg-9db"/>
+                                        <constraint firstItem="mB0-Ch-Mhd" firstAttribute="top" secondItem="Csj-sC-m0S" secondAttribute="bottom" constant="20" id="tUP-WH-tRi"/>
+                                        <constraint firstItem="mB0-Ch-Mhd" firstAttribute="height" secondItem="Csj-sC-m0S" secondAttribute="height" id="tpi-5A-J3z"/>
+                                        <constraint firstItem="Csj-sC-m0S" firstAttribute="width" secondItem="JLQ-3Y-Gcb" secondAttribute="width" multiplier="0.3" id="u4Y-p2-P3r"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="YRN-Yg-qLs"/>
+                                            <exclude reference="fwk-Qc-INX"/>
+                                            <exclude reference="u4Y-p2-P3r"/>
+                                            <exclude reference="Jrn-B7-T13"/>
+                                            <exclude reference="tpi-5A-J3z"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="YRN-Yg-qLs"/>
+                                            <exclude reference="Ywu-zB-yr7"/>
+                                            <include reference="fwk-Qc-INX"/>
+                                            <exclude reference="msX-hg-9db"/>
+                                            <include reference="u4Y-p2-P3r"/>
+                                            <include reference="Jrn-B7-T13"/>
+                                            <exclude reference="LXo-Ma-B1d"/>
+                                            <exclude reference="tUP-WH-tRi"/>
+                                            <include reference="tpi-5A-J3z"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -172,9 +208,15 @@
                             <constraint firstItem="CcO-GS-pZK" firstAttribute="top" secondItem="xmh-cu-ayg" secondAttribute="bottom" id="gA8-hz-WJI"/>
                             <constraint firstItem="CcO-GS-pZK" firstAttribute="centerX" secondItem="fim-Dp-K2L" secondAttribute="centerX" id="pBS-sg-Wge"/>
                             <constraint firstItem="YLy-IQ-Dhg" firstAttribute="top" secondItem="r4W-uh-yjK" secondAttribute="bottom" id="saH-5u-0ak"/>
+                            <constraint firstItem="Csj-sC-m0S" firstAttribute="height" relation="lessThanOrEqual" secondItem="fim-Dp-K2L" secondAttribute="height" multiplier="0.3" id="ubk-PH-9LT"/>
                             <constraint firstAttribute="trailing" secondItem="r4W-uh-yjK" secondAttribute="trailing" id="xCh-H8-1sp"/>
                             <constraint firstItem="r4W-uh-yjK" firstAttribute="centerX" secondItem="fim-Dp-K2L" secondAttribute="centerX" id="y8z-we-6ig"/>
                         </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="ubk-PH-9LT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="mB0-Ch-Mhd" id="cnF-0E-4s9"/>
@@ -191,7 +233,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rhc-c3-yCO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h5d-SO-KHt">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

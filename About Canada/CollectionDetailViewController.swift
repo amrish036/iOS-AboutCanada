@@ -18,9 +18,11 @@ class CollectionDetailViewController: UIViewController {
   
   override func viewDidLoad() {
         super.viewDidLoad()
+    // Do any additional setup after loading the view.
         image.image = imageData
         descriptionLabel.text = desc
-        // Do any additional setup after loading the view.
+        descriptionLabel.textAlignment = NSTextAlignment.center
+    
     }
 
     override func didReceiveMemoryWarning() {
