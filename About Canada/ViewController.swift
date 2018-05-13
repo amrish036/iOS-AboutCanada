@@ -23,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   //MARK: Variables and Outlets
   var elements = [Element]()
   @IBOutlet weak var CollectionView: UICollectionView!
-  
+  var refresher: UIRefreshControl!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,6 +31,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     CollectionView.delegate = self
     CollectionView.dataSource = self
     getJSONData()
+    refresher = UIRefreshControl()
+    refresher.attributedTitle = NSAttributedString(string:"Pull to refresh")
+    refresher.addTarget(self, action: #selector(ViewController.refresh), for: UIControlEvents.valueChanged)
+    CollectionView.addSubview(refresher)
     
   }
   
@@ -146,6 +150,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     return CGSize(width:100, height:150)
   }
   
+  @objc func refresh(){
+    refresher.endRefreshing()
+    CollectionView.reloadData()
+  }
   
   
 }
