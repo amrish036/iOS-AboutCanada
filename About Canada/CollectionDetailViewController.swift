@@ -21,7 +21,7 @@ class CollectionDetailViewController: UIViewController {
     // Do any additional setup after loading the view.
         image.image = imageData
         descriptionLabel.text = desc
-        descriptionLabel.textAlignment = NSTextAlignment.justified
+        descriptionLabel.textAlignment = NSTextAlignment.center
     
     }
 
