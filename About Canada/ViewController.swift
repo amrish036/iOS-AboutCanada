@@ -28,8 +28,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   let reachabilityManager = Alamofire.NetworkReachabilityManager(host:"www.google.com")
   
-  
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -39,11 +37,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     if (reachabilityManager?.isReachable)! {
       getJSONData()
     }else{
-      
       alert(title: "📵", message: "No Internet Connection 😢")
-      
     }
-    
     
     refresher = UIRefreshControl()
     refresher.attributedTitle = NSAttributedString(string:"Pull to refresh")
@@ -137,11 +132,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       }else{
         cell.labelCell.text = "No Title!"
       }
-      
-      
-      
       return cell
-      
     }
     
     cell.imageCell.image = UIImage(named: "default-image.png")
@@ -172,7 +163,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   @objc func refresh(){
     refresher.endRefreshing()
     self.elements.removeAll()
-    getJSONData()
+    if (reachabilityManager?.isReachable)! {
+      getJSONData()
+    }else{
+      alert(title: "📵", message: "No Internet Connection 😢")
+    }
   }
   
   func alert(title:String,message:String){
@@ -180,10 +175,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     print("Alert \(title) with \(message)")
     self.present(alert, animated: true, completion: nil)
-    
-    
   }
-  
 }
 
 
