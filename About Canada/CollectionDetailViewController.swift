@@ -14,13 +14,13 @@ class CollectionDetailViewController: UIViewController {
   @IBOutlet weak var descriptionLabel: UITextView!
   
   var imageData = UIImage() 
-  var desc = ""
+  var descriptionText = ""
   
   override func viewDidLoad() {
         super.viewDidLoad()
     // Do any additional setup after loading the view.
         image.image = imageData
-        descriptionLabel.text = desc
+        descriptionLabel.text = descriptionText
         descriptionLabel.textAlignment = NSTextAlignment.center
     
     }

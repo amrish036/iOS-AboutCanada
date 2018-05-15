@@ -18,8 +18,6 @@ struct Element {
   var imageData: UIImage?
 }
 
-
-
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
   
   //MARK: Variables and Outlets
@@ -27,6 +25,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   @IBOutlet weak var CollectionView: UICollectionView!
   var refresher: UIRefreshControl!
   var elements = [Element]()
+  let requestURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json/get"
+  let defaultSize = CGSize(width:100,height:150)
+  let defaultImage = UIImage(named: "default-image.png")
   
   let reachabilityManager = Alamofire.NetworkReachabilityManager(host:"www.google.com")
   
@@ -52,10 +53,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   // MARK: Network Calls
   func getJSONData(){
-    
-    let requestURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json/get"
-    
-    Alamofire.request(requestURL).responseString { response in
+
+    Alamofire.request(self.requestURL).responseString { response in
       
       if let responseObject = response.result.value {
         
@@ -67,15 +66,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
           self.navigationItem.title = json["title"].string
           
           for item in allElements {
+            
             let thisItem = Element(title:item.1["title"].string,
                                    description:item.1["description"].string,
                                    imageHref:(item.1["imageHref"].string),
-                                   size:CGSize(width:100,height:150),
-                                   imageData: UIImage(named: "default-image.png"))
+                                   size: self.defaultSize,
+                                   imageData: self.defaultImage)
+            
             self.elements.append(thisItem)
           }
         }
-      }else{
+      } else {
         self.alert(title: "Error", message: "Error Loading Content")
       }
       
@@ -91,7 +92,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
-    cell.imageCell.image = UIImage(named: "default-image.png")
+    cell.imageCell.image = self.defaultImage
     var data : Data?
     if self.elements.count > 0  {
       
@@ -114,17 +115,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self.elements[indexPath.row].imageData = UIImage(data:imageData)
                 self.elements[indexPath.row].size = self.elements[indexPath.row].imageData?.size
                 self.CollectionView.collectionViewLayout.invalidateLayout()
-              }else{
+              } else {
                 self.elements[indexPath.row].size = CGSize(width:100,height:100)
-                cell.imageCell.image = UIImage(named: "default-image.png")
+                cell.imageCell.image = self.defaultImage
               }
-
+              
               if(self.elements[indexPath.row].imageHref == nil || data == nil){
                 self.elements[indexPath.row].size = CGSize(width:100,height:100)
-                cell.imageCell.image = UIImage(named: "default-image.png")
+                cell.imageCell.image = self.defaultImage
               }
               cell.setNeedsLayout()
-            }else{
+            } else {
               print("0 elements")
             }
           }
@@ -134,13 +135,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       
       if(self.elements[indexPath.row].title != nil){
         cell.labelCell.text = self.elements[indexPath.row].title
-      }else{
+      } else {
         cell.labelCell.text = "No Title!"
       }
       return cell
     }
     
-    cell.imageCell.image = UIImage(named: "default-image.png")
+    cell.imageCell.image = self.defaultImage
     cell.labelCell.text = "Canada"
     
     return cell
@@ -159,8 +160,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         CollectionDVController.title = elements[indexPath.row].title!
       }
       self.navigationController?.pushViewController(CollectionDVController, animated: true)
-    }
-    else{
+    } else {
       alert(title: "Error!", message: "No Content")
     }
     
@@ -176,11 +176,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   @objc func refresh(){
     refresher.endRefreshing()
     self.elements.removeAll()
-    if (reachabilityManager?.isReachable)! {
-      getJSONData()
-    }else{
-      alert(title: "📵", message: "No Internet Connection")
-    }
+    (reachabilityManager?.isReachable)! ? getJSONData() :  alert(title: "📵", message: "No Internet Connection 😢")
+    
   }
   
   func alert(title:String,message:String){
