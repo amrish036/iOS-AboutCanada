@@ -70,7 +70,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let thisItem = Element(title:item.1["title"].string,
                                    description:item.1["description"].string,
                                    imageHref:(item.1["imageHref"].string),
-                                   size:CGSize(width:100,height:100),
+                                   size:CGSize(width:100,height:150),
                                    imageData: UIImage(named: "default-image.png"))
             self.elements.append(thisItem)
           }
@@ -91,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
-    cell.imageCell.image = nil
+    cell.imageCell.image = UIImage(named: "default-image.png")
     var data : Data?
     if self.elements.count > 0  {
       

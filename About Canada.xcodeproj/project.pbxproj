@@ -20,8 +20,8 @@
 		EE30EDAB20A6902700D76FC1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE30EDA720A6902700D76FC1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE30EDB020A6BE9600D76FC1 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE30EDAF20A6BE9600D76FC1 /* background.jpg */; };
 		EE30EDB220A6C6E300D76FC1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */; };
-		EE30EDB420A6D2F400D76FC1 /* default-image.png in Resources */ = {isa = PBXBuildFile; fileRef = EE30EDB320A6D2F300D76FC1 /* default-image.png */; };
 		EE30EDB820A7308900D76FC1 /* CollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30EDB720A7308900D76FC1 /* CollectionDetailViewController.swift */; };
+		EEC77A4C20AAF565005949E5 /* default-image.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC77A4B20AAF565005949E5 /* default-image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +74,8 @@
 		EE30EDA720A6902700D76FC1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		EE30EDAF20A6BE9600D76FC1 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		EE30EDB320A6D2F300D76FC1 /* default-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-image.png"; sourceTree = "<group>"; };
 		EE30EDB720A7308900D76FC1 /* CollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailViewController.swift; sourceTree = "<group>"; };
+		EEC77A4B20AAF565005949E5 /* default-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-image.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +172,8 @@
 		EE30EDAE20A6BE7E00D76FC1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				EE30EDB320A6D2F300D76FC1 /* default-image.png */,
 				EE30EDAF20A6BE9600D76FC1 /* background.jpg */,
+				EEC77A4B20AAF565005949E5 /* default-image.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				EE30EDB020A6BE9600D76FC1 /* background.jpg in Resources */,
 				EE30ED8020A68D0A00D76FC1 /* Assets.xcassets in Resources */,
 				EE30ED7E20A68D0A00D76FC1 /* Main.storyboard in Resources */,
-				EE30EDB420A6D2F400D76FC1 /* default-image.png in Resources */,
+				EEC77A4C20AAF565005949E5 /* default-image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
