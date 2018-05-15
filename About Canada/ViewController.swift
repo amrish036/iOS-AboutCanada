@@ -70,7 +70,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let thisItem = Element(title:item.1["title"].string,
                                    description:item.1["description"].string,
                                    imageHref:(item.1["imageHref"].string),
-                                   size:CGSize(width:0,height:0),
+                                   size:CGSize(width:100,height:100),
                                    imageData: UIImage(named: "default-image.png"))
             self.elements.append(thisItem)
           }
@@ -101,7 +101,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
           
           let imageUrl: URL? = URL(string: self.elements[indexPath.row].imageHref!)
           data = try? Data(contentsOf: imageUrl!)
-          
         }
         DispatchQueue.main.async {
           // Run UI Updates or call completion block
@@ -116,12 +115,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self.elements[indexPath.row].size = self.elements[indexPath.row].imageData?.size
                 self.CollectionView.collectionViewLayout.invalidateLayout()
               }else{
+                self.elements[indexPath.row].size = CGSize(width:100,height:100)
                 cell.imageCell.image = UIImage(named: "default-image.png")
               }
-              if data == nil {
-                cell.imageCell.image = UIImage(named: "default-image.png")
-              }
-              if(self.elements[indexPath.row].imageHref == nil){
+
+              if(self.elements[indexPath.row].imageHref == nil || data == nil){
+                self.elements[indexPath.row].size = CGSize(width:100,height:100)
                 cell.imageCell.image = UIImage(named: "default-image.png")
               }
               cell.setNeedsLayout()
