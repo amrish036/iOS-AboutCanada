@@ -131,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				EE30EDAD20A6BE6200D76FC1 /* Supporting Files */,
-				EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */,
 				EE30ED7A20A68D0A00D76FC1 /* ViewController.swift */,
 				EE30EDB720A7308900D76FC1 /* CollectionDetailViewController.swift */,
 				EE30EDB120A6C6E200D76FC1 /* CustomCollectionViewCell.swift */,
@@ -162,6 +161,7 @@
 		EE30EDAD20A6BE6200D76FC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE30ED7820A68D0A00D76FC1 /* AppDelegate.swift */,
 				EE30EDAE20A6BE7E00D76FC1 /* Images */,
 				EE30ED7F20A68D0A00D76FC1 /* Assets.xcassets */,
 				EE30ED8120A68D0A00D76FC1 /* LaunchScreen.storyboard */,

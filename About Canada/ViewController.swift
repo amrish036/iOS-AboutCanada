@@ -18,6 +18,8 @@ struct Element {
   var imageData: UIImage?
 }
 
+
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
   
   //MARK: Variables and Outlets
@@ -34,11 +36,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     CollectionView.delegate = self
     CollectionView.dataSource = self
     
-    if (reachabilityManager?.isReachable)! {
-      getJSONData()
-    }else{
-      alert(title: "📵", message: "No Internet Connection 😢")
-    }
+    (reachabilityManager?.isReachable)! ? getJSONData() :  alert(title: "📵", message: "No Internet Connection 😢")
     
     refresher = UIRefreshControl()
     refresher.attributedTitle = NSAttributedString(string:"Pull to refresh")
@@ -78,7 +76,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
           }
         }
       }else{
-        print("Error Loading Content")
+        self.alert(title: "Error", message: "Error Loading Content")
       }
       
       self.CollectionView.reloadData()
@@ -93,6 +91,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
+    cell.imageCell.image = nil
     var data : Data?
     if self.elements.count > 0  {
       
@@ -109,19 +108,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
           if let imageData = data {
             cell.imageCell.image = UIImage(data: imageData)
             
-            if cell.imageCell.image != nil {
-              let size = CGSize(width: (cell.imageCell.image?.size.width)!, height: (cell.imageCell.image?.size.height)!)
-              print(size)
-              self.elements[indexPath.row].size = size
-              self.elements[indexPath.row].imageData = UIImage(data:imageData)
+            if self.elements.count > 0 {
+              if cell.imageCell.image != nil {
+                let size = CGSize(width: (cell.imageCell.image?.size.width)!, height: (cell.imageCell.image?.size.height)!)
+                self.elements[indexPath.row].size = size
+                self.elements[indexPath.row].imageData = UIImage(data:imageData)
+                self.elements[indexPath.row].size = self.elements[indexPath.row].imageData?.size
+                self.CollectionView.collectionViewLayout.invalidateLayout()
+              }else{
+                cell.imageCell.image = UIImage(named: "default-image.png")
+              }
+              if data == nil {
+                cell.imageCell.image = UIImage(named: "default-image.png")
+              }
+              if(self.elements[indexPath.row].imageHref == nil){
+                cell.imageCell.image = UIImage(named: "default-image.png")
+              }
+              cell.setNeedsLayout()
+            }else{
+              print("0 elements")
             }
-            
-          }
-          if data == nil {
-            cell.imageCell.image = UIImage(named: "default-image.png")
-          }
-          if(self.elements[indexPath.row].imageHref == nil){
-            cell.imageCell.image = UIImage(named: "default-image.png")
           }
         }
         
@@ -144,21 +150,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let mainStoryboard:UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
     let CollectionDVController = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! CollectionDetailViewController
-    CollectionDVController.imageData = elements[indexPath.row].imageData!
+    if self.elements.count > 0 {
+      CollectionDVController.imageData = elements[indexPath.row].imageData!
+      
+      if(elements[indexPath.row].description != nil){
+        CollectionDVController.desc = elements[indexPath.row].description!
+      }
+      if (elements[indexPath.row].title != nil){
+        CollectionDVController.title = elements[indexPath.row].title!
+      }
+      self.navigationController?.pushViewController(CollectionDVController, animated: true)
+    }
+    else{
+      alert(title: "Error!", message: "No Content")
+    }
     
-    if(elements[indexPath.row].description != nil){
-      CollectionDVController.desc = elements[indexPath.row].description!
-    }
-    if (elements[indexPath.row].title != nil){
-      CollectionDVController.title = elements[indexPath.row].title!
-    }
-    self.navigationController?.pushViewController(CollectionDVController, animated: true)
+    
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    return CGSize(width:100, height:150)
+    return self.elements[indexPath.row].size!
   }
+  
+  // MARK: Methods
   
   @objc func refresh(){
     refresher.endRefreshing()
@@ -166,16 +180,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     if (reachabilityManager?.isReachable)! {
       getJSONData()
     }else{
-      alert(title: "📵", message: "No Internet Connection 😢")
+      alert(title: "📵", message: "No Internet Connection")
     }
   }
   
   func alert(title:String,message:String){
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    print("Alert \(title) with \(message)")
     self.present(alert, animated: true, completion: nil)
   }
+  
 }
 
 
